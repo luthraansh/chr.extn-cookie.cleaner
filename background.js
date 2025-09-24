@@ -33,20 +33,20 @@ async function clearCookies() {
     return !whitelist.includes(getParentDomain(domain));
   });
 
-  chrome.browsingData.remove(
-    {
-      excludeOrigins: whitelistDomains,
-    }, {
-      "appcache": true,
-      "cacheStorage": true,
-      "cookies": true,
-      "fileSystems": true,
-      "indexedDB": true,
-      "localStorage": true,
-      "serviceWorkers": true,
-      "webSQL": true,
-    }
-  );
+  // chrome.browsingData.remove(
+  //   {
+  //     excludeOrigins: whitelistDomains,
+  //   }, {
+  //     "appcache": true,
+  //     "cacheStorage": true,
+  //     "cookies": true,
+  //     "fileSystems": true,
+  //     "indexedDB": true,
+  //     "localStorage": true,
+  //     "serviceWorkers": true,
+  //     "webSQL": true,
+  //   }
+  // );
   console.log('Data cleared for domains not in whitelist:', domainsNotWhitelisted);
 }
 
